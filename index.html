@@ -1,0 +1,78 @@
+<!doctype html>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Converter</title>
+</head>
+
+<body>
+<form>
+    <input type="text" id="year" placeholder="Year">
+    <br>
+    <input type="text" id="abbrev" placeholder="Abbreviation" value="vonann">
+    <br>
+    <textarea id="shiftDefinitions" rows="50" cols="50">
+{
+    "x": {
+        "name": "Frühdienst",
+        "start": "07:00",
+        "end": "17:30"
+    },
+    "xx": {
+        "name": "Frühdienst",
+        "start": "07:00",
+        "end": "17:30"
+    },
+    "b!": {
+        "name": "Büro",
+        "start": "07:00",
+        "end": "17:30"
+    },
+    "b": {
+        "name": "Büro",
+        "start": "07:00",
+        "end": "17:30"
+    },
+    "wb": {
+        "name": "Externe Weiterbildung",
+        "start": "07:00",
+        "end": "17:30"
+    },
+    "d!": {
+        "name": "24h Dienst",
+        "start": "07:00",
+        "end": "07:00",
+        "overnight": true
+    },
+    "d": {
+        "name": "24h Dienst",
+        "start": "07:00",
+        "end": "07:00",
+        "overnight": true
+    },
+    "nd": {
+        "name": "Nachtdienst",
+        "start": "19:00",
+        "end": "07:00",
+        "overnight": true
+    },
+    "td": {
+        "name": "Tagdienst",
+        "start": "07:00",
+        "end": "19:00"
+    }
+}
+    </textarea>
+    <br>
+    <input type="file" id="fileInput">
+</form>
+<script src="js/vendor/http_cdn.jsdelivr.net_npm_xlsx@0.18.5_dist_xlsx.full.min.js"></script>
+<script src="js/vendor/csv.min.js"></script>
+<script src="js/vendor/ics.deps.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
