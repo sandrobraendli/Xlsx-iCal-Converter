@@ -52,7 +52,7 @@ function firstSheetToArray(workbookRawData) {
 function parseRawData(rawData, year, abbrev, shiftDefinitions) {
     const relevantColumn = getAbbrevColumn(abbrev, rawData);
     const events = [];
-    let currentMonth;
+    let currentMonth = undefined;
 
     for (let i = startRow; i < rawData.length; i++) {
         const row = rawData[i];
@@ -108,5 +108,4 @@ function createCalendar(events) {
 
 function toIsoString(date) {
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
-
 }
